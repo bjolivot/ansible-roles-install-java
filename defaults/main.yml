@@ -1,0 +1,6 @@
+---
+
+install_java_alternative_path: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java"
+install_java_apt_openjdk8_repository: "ppa:openjdk-r/ppa"
+install_java_apt_cache_update: yes
+install_java_apt_cache_lifetime: 3600

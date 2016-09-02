@@ -1,0 +1,12 @@
+---
+- name: add openjdk-r repository
+  apt_repository: repo="{{ install_java_apt_openjdk8_repository }}" update_cache=yes
+
+- name: install openjdk 7
+  apt: name=openjdk-7-jre-headless state=present update_cache="{{ install_java_apt_cache_update }}" cache_valid_time="{{ install_java_apt_cache_lifetime }}"
+
+- name: install openjdk 8
+  apt: name=openjdk-8-jre-headless state=present
+
+- name: Select java version 
+  alternatives: name="{{ install_java_alternative_path }}"

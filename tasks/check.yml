@@ -1,0 +1,11 @@
+---
+# here comes env checking
+#
+# Check var is defined :
+#
+- name: Check vars
+  debug: msg="Cheking {{ item | mandatory  }} "
+  tags: check
+  with_items:
+    - install_java_alternative_path
+    - install_java_apt_openjdk8_repository
