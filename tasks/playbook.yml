@@ -9,4 +9,4 @@
   apt: name=openjdk-8-jre-headless state=present
 
 - name: Select java version 
-  alternatives: name="{{ install_java_alternative_path }}"
+  alternatives: name=java path="{{ install_java_alternative_path }}"
