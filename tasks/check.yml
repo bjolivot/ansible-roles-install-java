@@ -3,9 +3,11 @@
 #
 # Check var is defined :
 #
-- name: Check vars
-  debug: msg="Cheking {{ item | mandatory  }} "
-  tags: check
-  with_items:
+- debug: var=vars
+
+- fail: msg="Variable '{{ item }}' is not defined"
+  when: item not in vars
+  with_items: 
     - install_java_alternative_path
     - install_java_apt_openjdk8_repository
+
