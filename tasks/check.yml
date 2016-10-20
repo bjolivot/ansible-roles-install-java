@@ -3,7 +3,7 @@
 #
 # Check var is defined :
 #
-- debug: var=vars
+#- debug: var=vars
 
 - fail: msg="Variable '{{ item }}' is not defined"
   when: item not in vars
